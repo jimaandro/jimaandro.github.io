@@ -242,7 +242,7 @@ const domUpdates = {
   resetKeyboard() {
     let keyboardLetters = Array.from($('.keyboard-letters'));
     keyboardLetters.forEach(letter => {
-      if (!['A', 'E', 'I', 'O', 'U'].includes($(letter).text())) {
+      if (!['Α', 'Ε', 'Η', 'Ι', 'Ο', 'Υ', 'Ω'].includes($(letter).text())) {
         $(letter).removeClass('vowel');
       }
     });
