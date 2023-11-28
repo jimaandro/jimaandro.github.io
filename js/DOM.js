@@ -2,7 +2,7 @@ import Player from './Player.js';
 
 const domUpdates = {
 
-  getPlayerNames(numPlayers) {
+  getPlayerNames() {
     let players = [];
     for (let i = 1; i <= numPlayers; i++) {
       players.push(this.getPlayer(i));

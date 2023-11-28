@@ -76,7 +76,6 @@ function updateNameInputsVisibility() {
   });
 }
 
-
 function init() {
   game.getPlayers();
   newRoundHandler();
