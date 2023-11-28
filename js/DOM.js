@@ -2,96 +2,29 @@ import Player from './Player.js';
 
 const domUpdates = {
 
-  getPlayerNames() {
+  getPlayerNames(numPlayers) {
     let players = [];
-    players.push(this.getPlayerOne());
-    players.push(this.getPlayerTwo());
-    players.push(this.getPlayerThree());
-    players.push(this.getPlayerFour());
-    players.push(this.getPlayerFive());
-    players.push(this.getPlayerSix());
-    players.push(this.getPlayerSeven());
+    for (let i = 1; i <= numPlayers; i++) {
+      players.push(this.getPlayer(i));
+    }
     return players;
   },
 
-  getPlayerOne() {
-    if ($('.player1-name').val()) {
-      var playerOne = new Player($('.player1-name').val());
-      $('.player1-ba').text(`${$('.player1-name').val()}: $`);
+  getPlayer(playerNumber) {
+    const playerName = $(`.player${playerNumber}-name`).val();
+    const defaultName = `Player ${playerNumber}`;
+
+    if (playerName) {
+      return new Player(playerName);
     } else {
-      var playerOne = new Player('Player 1');
+      return new Player(defaultName);
     }
-    return playerOne;
-  },
-  
-  getPlayerTwo() {
-    if ($('.player2-name').val()) {
-      var playerTwo = new Player($('.player2-name').val());
-      $('.player2-ba').text(`${$('.player2-name').val()}: $`);
-    } else {
-      var playerTwo = new Player('Player 2');
-    }
-    return playerTwo;
-  },
-  
-  getPlayerThree() {
-    if ($('.player3-name').val()) {
-      var playerThree = new Player($('.player3-name').val());
-      $('.player3-ba').text(`${$('.player3-name').val()}: $`);
-    } else {
-      var playerThree = new Player('Player 3');
-    }
-    return playerThree;
   },
 
-    getPlayerFour() {
-    if ($('.player4-name').val()) {
-      var playerFour = new Player($('.player4-name').val());
-      $('.player4-ba').text(`${$('.player4-name').val()}: $`);
-    } else {
-      var playerFour = new Player('Player 4');
+  clearInputs(numPlayers) {
+    for (let i = 1; i <= numPlayers; i++) {
+      $(`.player${i}-name`).val('');
     }
-    return playerFour;
-  },
-
-    getPlayerFive() {
-    if ($('.player5-name').val()) {
-      var playerFive = new Player($('.player5-name').val());
-      $('.player5-ba').text(`${$('.player5-name').val()}: $`);
-    } else {
-      var playerFive = new Player('Player 5');
-    }
-    return playerFive;
-  },
-
-    getPlayerSix() {
-    if ($('.player6-name').val()) {
-      var playerSix = new Player($('.player6-name').val());
-      $('.player6-ba').text(`${$('.player6-name').val()}: $`);
-    } else {
-      var playerSix = new Player('Player 6');
-    }
-    return playerSix;
-  },
-
-    getPlayerSeven() {
-    if ($('.player7-name').val()) {
-      var playerSeven = new Player($('.player7-name').val());
-      $('.player7-ba').text(`${$('.player7-name').val()}: $`);
-    } else {
-      var playerSeven = new Player('Player 7');
-    }
-    return playerSeven;
-  },
-
-  clearInputs() {
-    $('.player1-name').val('');
-    $('.player2-name').val('');
-    $('.player3-name').val('');
-    $('.player4-name').val('');
-    $('.player5-name').val('');
-    $('.player6-name').val('');
-    $('.player7-name').val('');
   },
 
   goToGameScreen() {
@@ -100,49 +33,18 @@ const domUpdates = {
   },
 
   displayNames(playerArray, index) {
+    const numPlayers = playerArray.length;
     $('.game-winner').text(playerArray[index].name);
     $('.winning-score').text(playerArray[index].wallet);
-   if (index === 6) {
-      $('.on-deck-name').text(playerArray[0].name);
-      $('.on-deck-score').text(playerArray[0].wallet);
-      $('.in-the-hole-name').text(playerArray[5].name);
-      $('.in-the-hole-score').text(playerArray[5].wallet);
-     } 
-    else if (index === 5) {
-      $('.on-deck-name').text(playerArray[6].name);
-      $('.on-deck-score').text(playerArray[6].wallet);
-      $('.in-the-hole-name').text(playerArray[4].name);
-      $('.in-the-hole-score').text(playerArray[4].wallet);
-     } 
-    else if (index === 4) {
-      $('.on-deck-name').text(playerArray[5].name);
-      $('.on-deck-score').text(playerArray[5].wallet);
-      $('.in-the-hole-name').text(playerArray[3].name);
-      $('.in-the-hole-score').text(playerArray[3].wallet);
-     } 
-     else if (index === 3) {
-      $('.on-deck-name').text(playerArray[4].name);
-      $('.on-deck-score').text(playerArray[4].wallet);
-      $('.in-the-hole-name').text(playerArray[2].name);
-      $('.in-the-hole-score').text(playerArray[2].wallet);
-     } else if (index === 2) {
-      $('.on-deck-name').text(playerArray[3].name);
-      $('.on-deck-score').text(playerArray[3].wallet);
-      $('.in-the-hole-name').text(playerArray[1].name);
-      $('.in-the-hole-score').text(playerArray[1].wallet);
-    } else if (index === 1) {
-      $('.on-deck-name').text(playerArray[2].name);
-      $('.on-deck-score').text(playerArray[2].wallet);
-      $('.in-the-hole-name').text(playerArray[0].name);
-      $('.in-the-hole-score').text(playerArray[0].wallet);
-    } else {
-      $('.on-deck-name').text(playerArray[1].name);
-      $('.on-deck-score').text(playerArray[1].wallet);
-      $('.in-the-hole-name').text(playerArray[6].name);
-      $('.in-the-hole-score').text(playerArray[6].wallet);
-    }
-    
-      
+  
+    const onDeckIndex = (index + 1) % numPlayers;
+    const inTheHoleIndex = (index - 1 + numPlayers) % numPlayers;
+  
+    $('.on-deck-name').text(playerArray[onDeckIndex].name);
+    $('.on-deck-score').text(playerArray[onDeckIndex].wallet);
+  
+    $('.in-the-hole-name').text(playerArray[inTheHoleIndex].name);
+    $('.in-the-hole-score').text(playerArray[inTheHoleIndex].wallet);
   },
 
   displayWinner(winner, score) {
@@ -249,48 +151,18 @@ const domUpdates = {
   },
 
   newPlayerTurn(array, index) {
+    const numPlayers = array.length;
     $('.game-winner').text(array[index].name);
     $('.winning-score').text(array[index].wallet);
-    if (index === 6) {
-      $('.on-deck-name').text(array[0].name);
-      $('.on-deck-score').text(array[0].wallet);
-      $('.in-the-hole-name').text(array[5].name)
-      $('.in-the-hole-score').text(array[5].wallet)
-    } 
-      else if (index === 5) {
-      $('.on-deck-name').text(array[6].name);
-      $('.on-deck-score').text(array[6].wallet);
-      $('.in-the-hole-name').text(array[4].name)
-      $('.in-the-hole-score').text(array[4].wallet)
-    } 
-        else if (index === 4) {
-      $('.on-deck-name').text(array[5].name);
-      $('.on-deck-score').text(array[5].wallet);
-      $('.in-the-hole-name').text(array[3].name)
-      $('.in-the-hole-score').text(array[3].wallet)
-    } 
-          else if (index === 3) {
-      $('.on-deck-name').text(array[4].name);
-      $('.on-deck-score').text(array[4].wallet);
-      $('.in-the-hole-name').text(array[2].name)
-      $('.in-the-hole-score').text(array[2].wallet)
-    } 
-    else if (index === 2) {
-      $('.on-deck-name').text(array[3].name);
-      $('.on-deck-score').text(array[3].wallet);
-      $('.in-the-hole-name').text(array[1].name)
-      $('.in-the-hole-score').text(array[1].wallet)
-    } else if (index === 1) {
-      $('.on-deck-name').text(array[2].name);
-      $('.on-deck-score').text(array[2].wallet);
-      $('.in-the-hole-name').text(array[0].name)
-      $('.in-the-hole-score').text(array[0].wallet)
-    } else {
-      $('.on-deck-name').text(array[1].name);
-      $('.on-deck-score').text(array[1].wallet);
-      $('.in-the-hole-name').text(array[6].name)
-      $('.in-the-hole-score').text(array[6].wallet)
-    }
+  
+    const onDeckIndex = (index + 1) % numPlayers;
+    const inTheHoleIndex = (index - 1 + numPlayers) % numPlayers;
+  
+    $('.on-deck-name').text(array[onDeckIndex].name);
+    $('.on-deck-score').text(array[onDeckIndex].wallet);
+  
+    $('.in-the-hole-name').text(array[inTheHoleIndex].name);
+    $('.in-the-hole-score').text(array[inTheHoleIndex].wallet);
   },
 
   highlightVowels() {
@@ -370,20 +242,10 @@ const domUpdates = {
   },
 
   clearBankAccts() {
-    $('.player1-ba-num').text('0');
-    $('.player2-ba-num').text('0');
-    $('.player3-ba-num').text('0');
-    $('.player4-ba-num').text('0');
-    $('.player5-ba-num').text('0');
-    $('.player6-ba-num').text('0');
-    $('.player7-ba-num').text('0');
-    $('.player1-ba').text('P1: $');
-    $('.player2-ba').text('P2: $');
-    $('.player3-ba').text('P3: $');
-    $('.player4-ba').text('P4: $');
-    $('.player5-ba').text('P5: $');
-    $('.player6-ba').text('P6: $');
-    $('.player7-ba').text('P7: $')
+    for (let i = 1; i <= numPlayers; i++) {
+      $(`.player${i}-ba-num`).text('0');
+      $(`.player${i}-ba`).text(`P${i}: $`);
+    }
   },
 
   displayBonusIntro(winner, score) {
