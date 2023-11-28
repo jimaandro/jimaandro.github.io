@@ -64,13 +64,13 @@ function updateNameInputsVisibility() {
     }
   });
 
-  $('.player').each(function (index) {
+  $('.bank-accts h4').each(function (index) {
     // Check if the index is less than numPlayers
     if (index < numPlayers) {
-      // If yes, show the input field
+      // If yes, show the bank account field
       $(this).show();
     } else {
-      // If not, hide the input field
+      // If not, hide the bank account field
       $(this).hide();
     }
   });
