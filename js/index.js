@@ -63,6 +63,17 @@ function updateNameInputsVisibility() {
       $(this).hide();
     }
   });
+
+  $('.player').each(function (index) {
+    // Check if the index is less than numPlayers
+    if (index < numPlayers) {
+      // If yes, show the input field
+      $(this).show();
+    } else {
+      // If not, hide the input field
+      $(this).hide();
+    }
+  });
 }
 
 
