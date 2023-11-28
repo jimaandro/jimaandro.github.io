@@ -24,7 +24,7 @@ const domUpdates = {
 
   clearInputs() {
     for (let i = 1; i <= numPlayers; i++) {
-      $('.player${i}-name').val('');
+      $(`.player${i}-name`).val('');
     }
   },
 
