@@ -14,22 +14,6 @@ let round;
 let puzzle;
 let wheel;
 $('.start-button').on('click', init);
-// Add an event listener for the pop-up submit button
-$('.num-players-submit').on('click', function () {
-  // Get the value entered by the user
-  const numPlayers = $('.num-players-input').val();
-
-  // Store the numPlayers value globally for later use
-  window.numPlayers = numPlayers;
-  updateNameInputsVisibility();
-  // Hide the pop-up window
-  $('.popup-cover').hide();
-
-  // Add any additional initialization logic here
-  // For example, you may want to show the home screen after getting the numPlayers value
-  $('.home-screen').show();
-});
-
 $('.quit').on('click', quitHandler);
 $('.spin-button').on('click', game.setUpWheel);
 $('.solve-button').on('click', domUpdates.displaySolvePopup);
@@ -50,6 +34,22 @@ function playLoopingAudio(audioObject)  {
     audioObject.play();
   });
 }
+
+// Add an event listener for the pop-up submit button
+$('.num-players-submit').on('click', function () {
+  // Get the value entered by the user
+  const numPlayers = $('.num-players-input').val();
+
+  // Store the numPlayers value globally for later use
+  window.numPlayers = numPlayers;
+  updateNameInputsVisibility();
+  // Hide the pop-up window
+  $('.popup-cover').hide();
+
+  // Add any additional initialization logic here
+  // For example, you may want to show the home screen after getting the numPlayers value
+  //$('.home-screen').show();
+});
 
 function updateNameInputsVisibility() {
   // Loop through all name-input elements
