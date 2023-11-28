@@ -27,7 +27,7 @@ $('.num-players-submit').on('click', function () {
 
   // Add any additional initialization logic here
   // For example, you may want to show the home screen after getting the numPlayers value
- // $('.home-screen').show();
+  $('.home-screen').show();
 });
 $('.start-button').on('click', init);
 $('.quit').on('click', quitHandler);
