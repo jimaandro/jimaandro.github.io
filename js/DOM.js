@@ -11,11 +11,11 @@ const domUpdates = {
   },
 
   getPlayer(playerNumber) {
-    const playerName = $('.player${playerNumber}-name').val();
+    const playerName = $(`.player${playerNumber}-name`).val();
     const defaultName = `Player ${playerNumber}`;
 
     if (playerName) {
-      $('.player${playerNumber}-ba').text(`${$('.player${playerNumber}-name').val()}: $`);
+      $(`.player${playerNumber}-ba`).text(`${$('.player${playerNumber}-name').val()}: $`);
       return new Player(playerName);
     } else {
       return new Player(defaultName);
