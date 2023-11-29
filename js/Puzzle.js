@@ -40,9 +40,9 @@ class Puzzle {
 
   checkIfVowelAvailable(vowel, player, e) {
     if ($(e.target).hasClass('active-vowel')) {
-      player.buyVowel();
       domUpdates.disableGuessedVowel(e);
       this.countCorrectLetters(vowel);
+      player.buyVowel();
     }
   }
 
