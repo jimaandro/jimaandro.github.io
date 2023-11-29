@@ -303,7 +303,7 @@ h2 {
 }
 
 .wheel {
-  background: linear-gradient(150deg, #38383a, #252122);
+  background: linear-gradient(133deg, #234e7f, #252122);
   border-radius: 15px;
   box-shadow: 5px 5px 5px 0px black;
   display: none;
@@ -350,6 +350,7 @@ h2 {
   z-index: 7;
 }
 
+/* Marks for options 1-6 */
 .mark1 {
   right: 115px;
   bottom: 2px;
@@ -388,10 +389,68 @@ h2 {
   height: 221px;
 }
 
+/* Marks for options 7-15 */
+.mark7 {
+  right: 130px;
+  top: 12px;
+  transform: rotate(0deg);
+  height: 221px;
+}
+
+.mark8 {
+  right: 158px;
+  top: 100px;
+  transform: rotate(-30deg);
+}
+
+.mark9 {
+  right: 162px;
+  top: 100px;
+  transform: rotate(-27deg);
+}
+
+.mark10 {
+  right: 157px;
+  top: 98px;
+  transform: rotate(-31deg);
+}
+
+.mark11 {
+  right: 157px;
+  top: 95px;
+  transform: rotate(-31deg);
+}
+
+.mark12 {
+  right: 162px;
+  top: 98px;
+  transform: rotate(-28deg);
+  height: 221px;
+}
+
+.mark13 {
+  right: 130px;
+  bottom: 12px;
+  transform: rotate(-60deg);
+  height: 221px;
+}
+
+.mark14 {
+  right: 158px;
+  bottom: 100px;
+  transform: rotate(-90deg);
+}
+
+.mark15 {
+  right: 162px;
+  bottom: 100px;
+  transform: rotate(-87deg);
+}
+
 .option1 {
   top: -108px;
   left: -2px;
-  transform: rotate(30deg);  
+  transform: rotate(0deg);  
   background: #ab79db;
 }
 
@@ -401,28 +460,28 @@ h2 {
   top: 90.5px;
   left: -91.5px;
   background: #ff0000;
-  transform: rotate(90deg);
+  transform: rotate(24deg);
 }
 
 .option3 {
   top: 241.5px;
   left: -3.5px;
   background: #3abaff;
-  transform: rotate(30.2deg);
+  transform: rotate(48deg);
 }
 
 .option4 {
   bottom: -68px;
   left: 170px;
-  background: #fff200;
-  transform: rotate(-29.5deg);
+  background: #00ff37;
+  transform: rotate(72deg);
 }
 
 .option5 {
   top: 91.5px;
   right: -83px;
   background: #3bb878;
-  transform: rotate(-89.3deg);
+  transform: rotate(96deg);
 }
 
 .option6 {
@@ -431,9 +490,74 @@ h2 {
   top: -60px;
   left: 171px;
   background: #ff6a0e;
-  transform: rotate(-150.1deg);
+  transform: rotate(120deg);
 }
 
+.option7 {
+  top: -135px;
+  left: 0;
+  background: #ffbf00;
+  transform: rotate(144deg);
+}
+
+.option8 {
+  clip-path: polygon(0% 84%, 50% 0%, 50% 0%, 100% 87%);
+  -webkit-clip-path: polygon(0% 84%, 50% 0%, 50% 0%, 100% 87%);
+  top: -119.5px;
+  left: 103px;
+  background: #800080;
+  transform: rotate(168deg);
+}
+
+.option9 {
+  top: -53.5px;
+  left: 198.5px;
+  background: #0000ff;
+  transform: rotate(192deg);
+}
+
+.option10 {
+  bottom: -88px;
+  left: 198.5px;
+  background: #008000;
+  transform: rotate(216deg);
+}
+
+.option11 {
+  top: -119.5px;
+  right: 103px;
+  background: #ff4500;
+  transform: rotate(240deg);
+}
+
+.option12 {
+  top: -135px;
+  right: 0;
+  background: #ffd700;
+  transform: rotate(264deg);
+}
+
+.option13 {
+  clip-path: polygon(0% 84%, 50% 0%, 50% 0%, 100% 87%);
+  -webkit-clip-path: polygon(0% 84%, 50% 0%, 50% 0%, 100% 87%);
+  top: -119.5px;
+  right: 103px;
+  background: #800080;
+  transform: rotate(288deg);
+}
+
+.option14 {
+  top: -53.5px;
+  right: 198.5px;
+  background: #0000ff;
+  transform: rotate(312deg);
+}
+
+.option15 {
+  bottom: -88px;
+  right: 198.5px;
+  background: #008000;
+  transform: rotate(336deg);
 .slide-in {
   animation: slide 1s ease;
   transform: translateX(0);
