@@ -8,7 +8,10 @@ class Player {
   }
 
   guessCorrectLetter(numCorrect, wheelValue) {
-    this.wallet += numCorrect * wheelValue;
+    if (wheelValue !== 'ΠΑΤΑΤΑΚΙΑ' && wheelValue !== 'ΚΡΟΥΑΣΑΝ'){
+      this.wallet += numCorrect * wheelValue;
+    }
+    
     domUpdates.updateWallet(this);
     domUpdates.disableKeyboard();
   }
