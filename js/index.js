@@ -186,10 +186,10 @@ function spinHandler() {
 }
 
 function badSpinHandler() {
-  if (wheel.currentValue === 'LOSE A TURN') {
+  if (wheel.currentValue === 'ΧΑΝΕΙΣ ΣΕΙΡΑ') {
     game.endTurn();
     buzz.play();
-  } else if (wheel.currentValue === 'BANKRUPT') {
+  } else if (wheel.currentValue === 'ΧΡΕΩΚΟΠΙΑ') {
     bankrupt.play();
     game.players[game.playerIndex].wallet = 0;
     game.endTurn();

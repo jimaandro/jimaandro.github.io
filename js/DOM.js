@@ -206,7 +206,7 @@ const domUpdates = {
   },
 
   displayWheelValues(wheel) {
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < 15; i++) {
       $(`.mark${i + 1}`).text(wheel.spinValues[i])
     }
   },
