@@ -1,267 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Τροχός της Τύχης!</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimitrios Andronikou | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 class="title">ΤΡΟΧΟΣ ΤΗΣ ΤΥΧΗΣ</h1>
-  <header>
-      <div class="on-deck">
-        <h2 class="on-deck-name">player 2</h2>
-        <h2 class="on-deck-score">2,000</h2>
-      </div>
-      <div class="at-bat">
-        <h2 class="game-winner">player 1</h2>
-        <h2 class="winning-score">2,000</h2>
-        <button class="spin-button top-buttons">ΓΥΡΝΑ</button>
-        <button class="solve-button top-buttons">ΛΥΣΕ ΤΟ</button>
-        <button class="vowel-button top-buttons">ΦΩΝΗΕΝ</button>
-      </div>
-      <div class="in-the-hole">
-        <h2 class="in-the-hole-name">player 3</h2>
-        <h2 class="in-the-hole-score">2,000</h2>
-      </div>
-  </header>
-  <main>
-    <div class="puzzle-section">
-      <div class="vowel-error">
-        <h2>Δεν έχεις αρκετά χρήματα</h2>
-      </div>
-      <div class="yell-box">ΧΡΕΩΚΟΠΙΑ</div>
-      <div class="current-spin-value">
-        <h2 class="spin-number-header">Κέρδος γυρίσματος</h2>
-        <h2 class="spin-number">--</h2>
-      </div>
-      <div class="puzzle-grid">
-        <div class="letter-container empty"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container empty"></div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container">
-          <span class="letter-content"></span>
-        </div>
-        <div class="letter-container empty"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container"></div>
-        <div class="letter-container empty"></div>
-      </div>
-    <div class="hint">
-      <h2 class="hint-header">Κατηγορία</h2>
-      <h2 class="hint-value">Around The House</h2>
-    </div>
-      <div class="quit">
-        <p class="quit-text">ΕΞΟΔΟΣ</p>
-      </div><div class="round-container">
-        <p class="round-text">ΓΥΡΟΣ <span class="round-num">0</span></p>
-      </div>
-    </div>
-    <div class="solve-popup">
-      <h2>Γραψε τη λέξη:</h2>
-      <input class="solve-input" type="text" autofocus>
-      <button class="solve-input-button">Enter Guess</button>
-    </div>
-    <div class="keyboard-section">
-      <div class="keyboard-letters vowel">Α</div>
-      <div class="keyboard-letters temp-disabled">Β</div>
-      <div class="keyboard-letters temp-disabled">Γ</div>
-      <div class="keyboard-letters temp-disabled">Δ</div>
-      <div class="keyboard-letters vowel">Ε</div>
-      <div class="keyboard-letters temp-disabled">Ζ</div>
-      <div class="keyboard-letters vowel">Η</div>
-      <div class="keyboard-letters temp-disabled">Θ</div>
-      <div class="keyboard-letters vowel">Ι</div>
-      <div class="keyboard-letters temp-disabled">Κ</div>
-      <div class="keyboard-letters temp-disabled">Λ</div>
-      <div class="keyboard-letters temp-disabled">Μ</div>
-      <div class="keyboard-letters temp-disabled">Ν</div>
-      <div class="keyboard-letters temp-disabled">Ξ</div>
-      <div class="keyboard-letters vowel">Ο</div>
-      <div class="keyboard-letters temp-disabled">Π</div>
-      <div class="keyboard-letters temp-disabled">Ρ</div>
-      <div class="keyboard-letters temp-disabled">Σ</div>
-      <div class="keyboard-letters temp-disabled">Τ</div>
-      <div class="keyboard-letters vowel">Υ</div>
-      <div class="keyboard-letters temp-disabled">Φ</div>
-      <div class="keyboard-letters temp-disabled">Χ</div>
-      <div class="keyboard-letters temp-disabled">Ψ</div> 
-      <div class="keyboard-letters vowel">Ω</div>
-      <div class="bank-accts">
-        <h3>Bank Accounts:</h3>
-        <h4><span class="player1-ba">P1: $</span><span class="player1-ba-num">0</span></h4>
-        <h4><span class="player2-ba">P2: $</span><span class="player2-ba-num">0</span></h4>
-        <h4><span class="player3-ba">P3: $</span><span class="player3-ba-num">0</span></h4>
-        <h4><span class="player4-ba">P4: $</span><span class="player4-ba-num">0</span></h4>
-        <h4><span class="player5-ba">P5: $</span><span class="player5-ba-num">0</span></h4>
-        <h4><span class="player6-ba">P6: $</span><span class="player6-ba-num">0</span></h4>
-        <h4><span class="player7-ba">P7: $</span><span class="player7-ba-num">0</span></h4>
-        <h4><span class="player1-ba">P8: $</span><span class="player8-ba-num">0</span></h4>
-        <h4><span class="player2-ba">P9: $</span><span class="player9-ba-num">0</span></h4>
-        <h4><span class="player3-ba">P10: $</span><span class="player10-ba-num">0</span></h4>
-        <h4><span class="player4-ba">P11: $</span><span class="player11-ba-num">0</span></h4>
-        <h4><span class="player5-ba">P12: $</span><span class="player12-ba-num">0</span></h4>
-        <h4><span class="player6-ba">P13: $</span><span class="player13-ba-num">0</span></h4>
-        <h4><span class="player7-ba">P14: $</span><span class="player14-ba-num">0</span></h4>
-      </div>
-    </div>
-  </main>
-  <section class="wheel">
-    <div class="wheel-circle">
-      <div class="wheel-option option1"><div class="q-mark mark1">?</div></div>
-      <div class="wheel-option option2"><div class="q-mark mark2">?</div></div>
-      <div class="wheel-option option3"><div class="q-mark mark3">?</div></div>
-      <div class="wheel-option option4"><div class="q-mark mark4">?</div></div>
-      <div class="wheel-option option5"><div class="q-mark mark5">?</div></div>
-      <div class="wheel-option option6"><div class="q-mark mark6">?</div></div>
-      <div class="wheel-option option7"><div class="q-mark mark7">?</div></div>
-      <div class="wheel-option option8"><div class="q-mark mark8">?</div></div>
-      <div class="wheel-option option9"><div class="q-mark mark9">?</div></div>
-      <div class="wheel-option option10"><div class="q-mark mark10">?</div></div>
-      <div class="wheel-option option11"><div class="q-mark mark11">?</div></div>
-      <div class="wheel-option option12"><div class="q-mark mark12">?</div></div>
-      <div class="wheel-option option13"><div class="q-mark mark13">?</div></div>
-      <div class="wheel-option option14"><div class="q-mark mark14">?</div></div>
-      <div class="wheel-option option15"><div class="q-mark mark15">?</div></div>
-    </div>
-    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24"><path d="M17 5h-17v14h17l7-7z"/></svg>
-    <p class="spin-text">ΓΥΡΝΑ</p>
-  </section>
-  <div class="bonus-round-intro">
-    <h2 class="winner-name"><span class="name-of-bonus-player">Player 1</span> <span class="win-message"> MoVES To THE BONUS RoUND!</span></h2>
-    <h2>ToTAL SCoRE: <span class="winner-money-pre-bonus">3000</span></h2>
-    <button class="start-bonus-round">LET'S GO!</button>
-  </div>
-  <div class="popup-cover"></div>
-  <div class="home-screen">
-    <input class="name-input player1-name" type="text" name="player1" placeholder="Enter Player 1 Name" autofocus>
-    <input class="name-input player2-name" type="text" name="player2" placeholder="Enter Player 2 Name">
-    <input class="name-input player3-name" type="text" name="player3" placeholder="Enter Player 3 Name">
-    <input class="name-input player4-name" type="text" name="player4" placeholder="Enter Player 4 Name">
-    <input class="name-input player5-name" type="text" name="player5" placeholder="Enter Player 5 Name">
-    <input class="name-input player6-name" type="text" name="player6" placeholder="Enter Player 6 Name">
-    <input class="name-input player7-name" type="text" name="player7" placeholder="Enter Player 7 Name">
-    <input class="name-input player8-name" type="text" name="player8" placeholder="Enter Player 8 Name">
-    <input class="name-input player9-name" type="text" name="player9" placeholder="Enter Player 9 Name">
-    <input class="name-input player10-name" type="text" name="player10" placeholder="Enter Player 10 Name">
-    <input class="name-input player11-name" type="text" name="player11" placeholder="Enter Player 11 Name">
-    <input class="name-input player12-name" type="text" name="player12" placeholder="Enter Player 12 Name">
-    <input class="name-input player13-name" type="text" name="player13" placeholder="Enter Player 13 Name">
-    <input class="name-input player14-name" type="text" name="player14" placeholder="Enter Player 14 Name">
-    <button class="start-button">START</button>
-  </div>
-  <!-- Add this div for the pop-up window -->
-<div class="popup-cover">
-  <div class="num-players-popup">
-    <h2>Αριθμός παικτών 1-14:</h2>
-    <input class="num-players-input" type="number" min="1" max="14">
-    <button class="num-players-submit">ENTER</button>
-  </div>
-</div>
+    <header>
+        <h1>Dimitrios Andronikou</h1>
+        <p>Hardware Design Engineer | Computer Science Enthusiast</p>
+        <p>Contact: <a href="mailto:jimaandron@gmail.com">jimaandron@gmail.com</a> | <a href="mailto:dimitriosa@exapsys.eu">dimitriosa@exapsys.eu</a></p>
+        <p><a href="https://github.com/jimaandro">GitHub</a> | <a href="https://www.linkedin.com/in/dimitris-andronikou-2314271b6">LinkedIn</a></p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Currently a part-time Hardware Design Engineer working on the EU-funded REBECCA project, specializing in hardware design and memory controller development. Passionate about logic circuits, microelectronics, and computer architecture.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Logic Gate Circuits</li>
+            <li>Verilog, SystemVerilog, and Design Verification</li>
+            <li>Vivado and FPGA usage</li>
+            <li>Programming: Java, C++, C, Assembly</li>
+            <li>Linux, Git, Fusion Compiler, Innovus, Genus</li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p><strong>University of Crete</strong>, Department of Computer Science (2024-2026)</p>
+        <p>Master’s in Computer Science, focusing on Computer Architecture and Microelectronics</p>
+        
+        <p><strong>Aristotle University of Thessaloniki (AUTH)</strong>, Electrical and Computer Engineering (2018-2023)</p>
+        <p>GPA: 8.15/10. Integrated Master with specialization in Microelectronics and Computer Science</p>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <ul>
+            <li><strong>Hardware Design Engineer (Part-Time)</strong> - EXAPSYS, Nov 2023 – Present</li>
+            <p>Involved in the REBECCA project, working on hardware engineering for memory controllers.</p>
+            
+            <li><strong>Master Thesis Intern</strong> - CARV, FORTH, Feb 2023 – Oct 2023</li>
+            <p>Project: Porting Linux to an advanced RISC-V CPU.</p>
+            
+            <li><strong>Intern</strong> - CARV, FORTH, Sep 2022 – Nov 2022</li>
+            <p>Focused on floating-point precision algorithms on FPGA using SystemVerilog.</p>
+        </ul>
+    </section>
+
+    <section id="competitions">
+        <h2>Competitions & Achievements</h2>
+        <ul>
+            <li>Young Business Talents, Nivea (Finalist, 2016 & 2017)</li>
+            <li>Panhellenic Programming Competition (Finalist, 2017)</li>
+            <li>Invent For the Planet, AUTh (3rd Place)</li>
+            <li>Panhellenic Physics Competition (Distinction, 2017)</li>
+        </ul>
+    </section>
+
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+        <p>Aeromodeling and Chess (qualified for the national final in 2014 and achieved local distinctions).</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dimitrios Andronikou | <a href="https://github.com/jimaandro/jimaandro.github.io">Source Code on GitHub</a></p>
+    </footer>
 </body>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
-<script type="module" src="js/index.js"></script>
 </html>
-
-
