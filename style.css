@@ -1,39 +1,127 @@
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
+/* Reset basic styling */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9fc;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header styling */
 header {
-    text-align: center;
-    padding: 2rem;
-    background-color: #4CAF50;
+    background-color: #007acc;
     color: white;
-}
-
-section {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background-color: #fff;
+    padding: 20px;
+    text-align: center;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-h2 {
-    color: #4CAF50;
+header h1 {
+    font-size: 2em;
+    margin-bottom: 0.2em;
 }
 
+header p {
+    font-style: italic;
+}
+
+/* Navigation bar */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e0e0e0;
+}
+
+/* Section styling */
+section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #007acc;
+    border-bottom: 3px solid #007acc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+section p, section li {
+    margin-bottom: 10px;
+}
+
+/* Styling lists */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
+ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Contact links */
+#contact a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: #005f99;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #4CAF50;
+    padding: 10px;
+    background-color: #007acc;
     color: white;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Profile photo placeholder */
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    header, section, footer {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 0.9em;
+    }
 }
